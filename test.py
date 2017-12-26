@@ -59,8 +59,8 @@ if input("Continue to predict?") == 'y':
 				num_hit += 1
 
 			print("Test image " + str(index + 1))
-			print("Prob. " + str(class_list[0]) + '  ' + str(prediction[0][0]))
-			print("Prob. " + str(class_list[1]) + '  ' + str(prediction[0][1]))
+			for i in range(len(class_list)):
+				print("Prob. " + str(class_list[i]) + ' ' + str(prediction[0][i]))
 			print("prediction: " + str(predicted_label) + "    real: " + str(real_label) + "  -->  " + result)
 			print("")
 
